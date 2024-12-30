@@ -17,6 +17,9 @@ numpy = "^1.26.4"
 poethepoet = "0.29.0"
 datasets = "^3.0.1"
 
+[tool.poetry.plugins."poetry.command"]
+poe = "poethepoet:PoetryPoeCommand"
+
 # Digital data ETL
 selenium = "^4.21.0"
 webdriver-manager = "^4.0.1"
@@ -96,8 +99,8 @@ call-inference-ml-service = "curl -X POST 'http://127.0.0.1:8000/rag' -H 'Conten
 
 # Infrastructure
 ## Local infrastructure
-local-docker-infrastructure-up = "docker compose up -d"
-local-docker-infrastructure-down = "docker compose stop"
+local-docker-infrastructure-up = "docker-compose up -d"
+local-docker-infrastructure-down = "docker-compose stop"
 local-zenml-server-down = "poetry run zenml down"
 local-infrastructure-up = [
     "local-docker-infrastructure-up",
