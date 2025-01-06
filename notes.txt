@@ -1,1 +1,21 @@
-Test
+Updating Fork Without Losing Commits:
+# Add the upstream repository (do this once)
+git remote add upstream <URL_OF_THE_ORIGINAL_REPOSITORY>
+
+# Fetch changes from the upstream repository
+git fetch upstream
+
+# Checkout your local branch
+git checkout main  # Or git checkout master
+
+# Merge the upstream branch into your local branch
+git merge upstream/main  # Or git merge upstream/master
+
+# Handle merge conflicts if any (edit files, git add, git commit)
+
+# Push changes to your fork (optional)
+git push origin main  # Or git push origin master
+
+--------------------
+
+
